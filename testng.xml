@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+  <parameter name="url" value="http://www.newtours.demoaut.com/" />
+       <test name="Selenium-AutomationSuite">
+       
+			<classes> 
+<!-- P1 test cases   !--> 
+ 				   <class name="tests.sample" />
+
+              </classes>
+       </test>
+
+
+</suite>

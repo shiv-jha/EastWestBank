@@ -1,0 +1,10 @@
+Tools\Excel.class
+common\TestCaseConfiguration.class
+Pages\HomePage.class
+Tools\Utility.class
+common\TestCaseConfiguration$1.class
+Tools\ReportManager.class
+Pages\Login.class
+tests\BillsNew.class
+Pages\Deposit.class
+Pages\NewBill.class

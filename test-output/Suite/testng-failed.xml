@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="url" value="http://www.google.com/"/>
+  <test name="Selenium-AutomationSuite(failed)">
+    <classes>
+      <class name="tests.BillsEdit">
+        <methods>
+          <include name="editBillsDateQty"/>
+          <include name="editBillsPaymentType"/>
+        </methods>
+      </class> <!-- tests.BillsEdit -->
+      <class name="tests.BillsNew">
+        <methods>
+          <include name="NewBills"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.BillsNew -->
+    </classes>
+  </test> <!-- Selenium-AutomationSuite(failed) -->
+</suite> <!-- Failed suite [Suite] -->
