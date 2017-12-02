@@ -37,6 +37,7 @@ import com.relevantcodes.extentreports.Chart;
 import com.relevantcodes.extentreports.LogStatus;
 
 import Tools.Excel;
+import Tools.ReplaceFileContents;
 //import Tools.Constants;
 import Tools.ReportManager;
 import Tools.Utility;
@@ -49,7 +50,7 @@ public class TestCaseConfiguration {
      public static  String sExcelPath;
      public static  HomePage homePage;
      public static Dictionary<String, String> excelDict;
-     
+     public static String sReportFile;
     // public static  String sClinicalBaseNavigation;
      
 
@@ -64,7 +65,8 @@ public class TestCaseConfiguration {
   		final DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
         //capabilities.setCapability(InternetExplorerDriver.INTRODUCE_FLAKINESS_BY_IGNORING_SECURITY_DOMAINS, true);
     	 String timestamp = new SimpleDateFormat("yyyyMMddhhmm'.html'").format(new Date());
- 		 Reports = ReportManager.getReporter(System.getProperty("user.dir")+"\\Reports\\" +"report_" + timestamp);
+ 		  sReportFile=System.getProperty("user.dir")+"\\Reports\\" +"report_" + timestamp;
+    	 Reports = ReportManager.getReporter(System.getProperty("user.dir")+"\\Reports\\" +"report_" + timestamp);
     	// File file = new File(System.getProperty("user.dir")+"\\Resources\\" + "IEDriverServer.exe");
     	 File file = new File(System.getProperty("user.dir")+"\\Resources\\" + "chromedriver.exe");
 		 //System.setProperty("webdriver.ie.driver", file.getAbsolutePath());
@@ -145,5 +147,6 @@ public class TestCaseConfiguration {
     	 driver.get().quit();*/
     	 Reports.config().chartTitle(Chart.TEST, "Test Steps");
     	 Reports.config().chartTitle(Chart.TEST_SET, "Test Cases"); 
+    	 ReplaceFileContents.replace(sReportFile);
      }
 }
